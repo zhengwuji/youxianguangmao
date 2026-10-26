@@ -28,19 +28,20 @@
 1. Windows 电脑 + USB 数据线 + 安卓手机；
 2. 手机开启 **开发者选项 → USB 调试**；
 3. 电脑已安装 [adb](https://developer.android.com/tools/releases/platform-tools) 并加入 PATH（`adb version` 能输出版本即可）；
-4. 手机安装改造版 APK（仓库不含成品 APK，构建方法见下文 [构建手机端 APK](#构建手机端-apk本地)）。
+4. 手机端 APK 从 Release 压缩包内获取（见下方步骤 1），也可自行构建（见 [构建手机端 APK](#构建手机端-apk本地)）。
 
 ### 步骤
 
-1. 到 [Releases](https://github.com/zhengwuji/youxianguangmao/releases) 下载最新的 `有线快猫-电脑端.zip`，解压到任意目录（保持压缩包内的目录结构，`gnirehtet-rust-win64` 子目录必须与主程序同级）；
-2. 手机用 USB 连接电脑，手机上勾选"允许 USB 调试"；
-3. 双击 **有线快猫-电脑端.exe**。程序会自动完成：
+1. 到 [Releases](https://github.com/zhengwuji/youxianguangmao/releases) 下载最新的 `youxianguangmao.zip`，解压到任意目录（保持压缩包内的目录结构，`gnirehtet-rust-win64` 子目录必须与主程序同级）；
+2. 安装手机端：`adb install -r 有线快猫-手机端.apk`（若装完图标消失被系统禁用，执行 `adb shell pm enable com.liibei.fastcat`）；
+3. 手机用 USB 连接电脑，手机上勾选"允许 USB 调试"；
+4. 双击 **有线快猫-电脑端.exe**。程序会自动完成：
    - 启动 gnirehtet 中继（本机 31416 端口）；
    - 建立 adb 反向端口（手机 41573 → 电脑 31416）；
    - 每 11 秒心跳唤醒手机端服务；
    - 检测到 VPN 未启动时自动拉起；
-4. 约 20 秒内手机 App 显示 **已连接**，实时流量开始跳动，直接用浏览器等任意应用上网即可；
-5. 用完点击 **停止全部** 一键收尾。
+5. 约 20 秒内手机 App 显示 **已连接**，实时流量开始跳动，直接用浏览器等任意应用上网即可；
+6. 用完点击 **停止全部** 一键收尾。
 
 > 程序每 3 秒巡检：设备在线 / 中继存活 / 反向通道 / 心跳 / VPN 状态 / 流量统计，任何一环掉线都会自动恢复，无需人工干预。
 
@@ -105,8 +106,11 @@ adb install -r dist\有线快猫_v18.apk
 
 ## 自动编译（CI）
 
-- 推送 **代码变更** 到 `main` 分支时（`README.md` 等纯文档改动除外），GitHub Actions 自动编译 PC 端 exe，与 `gnirehtet.exe`、使用说明一起打包为 `有线快猫-电脑端.zip` 发布到 [Releases](https://github.com/zhengwuji/youxianguangmao/releases)；
-- 也可在 **Actions → 编译PC端并发布Release → Run workflow** 手动触发。
+- 推送 **代码变更** 到 `main` 分支时（`README.md` 等纯文档改动除外），GitHub Actions 自动：
+  - 编译 PC 端 exe（csc）；
+  - 重打包手机端 APK（apktool 3.0.3）并自动签名；
+  - 将两者与 `gnirehtet.exe`、使用说明一起打包为 `youxianguangmao.zip` 发布到 [Releases](https://github.com/zhengwuji/youxianguangmao/releases)，同时附单独的 `fastcat-modified.apk`；
+- 也可在 **Actions → 编译PC端与手机端并发布Release → Run workflow** 手动触发。
 
 ## 更新记录
 
