@@ -56,15 +56,19 @@ jobs:
 
       - name: 编译并签名手机端 APK
         run: |
+          set -euo pipefail
           cd 源码/apktool工程
           java -jar ../../apktool.jar b . -o ../../fastcat-modified-unsigned.apk
           cd ../..
-          java -jar uber-apk-signer.jar --overwrite fastcat-modified-unsigned.apk
+          java -jar uber-apk-signer.jar -a fastcat-modified-unsigned.apk --overwrite
           mv fastcat-modified-unsigned.apk fastcat-modified.apk
           rm -f fastcat-modified-unsigned.apk.idsig
-          # 校验产物结构完整
+          # 硬校验：结构完整 + v1/v2 签名必须真实存在（签名器参数错误时可能静默跳过）
           unzip -l fastcat-modified.apk | grep -q AndroidManifest.xml
           unzip -l fastcat-modified.apk | grep -q classes.dex
+          unzip -l fastcat-modified.apk | grep -Eq 'META-INF/.*\.SF' || { echo "缺少v1签名"; exit 1; }
+          grep -aq 'APK Sig Block 42' fastcat-modified.apk || { echo "缺少v2签名块"; exit 1; }
+          echo "APK 签名校验通过"
 
       - name: 上传产物
         uses: actions/upload-artifact@v4

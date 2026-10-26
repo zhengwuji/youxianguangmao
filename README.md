@@ -94,8 +94,8 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe ^
 :: 1. 重打包
 java -jar apktool.jar b 源码\apktool工程 -o dist\有线快猫_v18.apk
 
-:: 2. 签名（示例用 uber-apk-signer）
-java -jar uber-apk-signer.jar --overwrite dist\有线快猫_v18.apk
+:: 2. 签名（示例用 uber-apk-signer，注意必须带 -a 参数）
+java -jar uber-apk-signer.jar -a dist\有线快猫_v18.apk --overwrite
 del dist\有线快猫_v18.apk.idsig
 
 :: 3. 安装
