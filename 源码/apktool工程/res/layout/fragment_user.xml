@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#090a0c" android:scrollbars="none" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="20.0dp" android:paddingBottom="32.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+        <TextView android:textSize="26.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_title" />
+        <TextView android:textSize="12.0sp" android:textColor="#777d86" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/profile_subtitle" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/profile_account" android:background="@drawable/bg_profile_account" android:padding="18.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dp" android:minHeight="104.0dp">
+            <com.xuexiang.xui.widget.imageview.RadiusImageView android:id="@id/iv_avatar" android:background="@drawable/bg_profile_avatar" android:padding="15.0dp" android:layout_width="62.0dp" android:layout_height="62.0dp" android:src="@drawable/ic_user_avatar" app:riv_border_color="#45698d" app:riv_border_width="1.0dp" app:riv_is_circle="true" app:riv_selected_border_color="#45698d" app:riv_selected_border_width="1.0dp" app:riv_selected_mask_color="#00ffffff" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dp">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffff" android:ellipsize="middle" android:id="@id/tv_avatar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/login_fastcat" android:maxLines="1" />
+                <TextView android:textSize="12.0sp" android:textColor="#9097a1" android:id="@id/tv_account_caption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="@string/sync_after_login" android:maxLines="2" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#8fc2ff" android:gravity="center" android:id="@id/tv_account_action" android:background="@drawable/bg_profile_account_action" android:layout_width="wrap_content" android:layout_height="32.0dp" android:minWidth="54.0dp" android:text="@string/login" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" android:layout_marginStart="10.0dp" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/member" android:background="@drawable/bg_profile_member" android:paddingTop="16.0dp" android:paddingBottom="16.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:minHeight="92.0dp" android:paddingStart="18.0dp" android:paddingEnd="16.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#b99a62" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FASTCAT MEMBER" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#fff3db" android:id="@id/tv_member_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/upgrade_member" />
+                <TextView android:textSize="12.0sp" android:textColor="#afa189" android:id="@id/tv_member_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/member_summary" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#2a1c08" android:gravity="center" android:id="@id/tv_member_action" android:background="@drawable/bg_profile_member_action" android:layout_width="wrap_content" android:layout_height="36.0dp" android:minWidth="76.0dp" android:text="@string/view_plans" android:paddingStart="14.0dp" android:paddingEnd="14.0dp" android:layout_marginStart="10.0dp" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#8b9098" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="@string/help_and_support" android:layout_marginStart="2.0dp" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_profile_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dp">
+            <TextView android:id="@id/help" android:text="@string/faq" android:drawableStart="@drawable/ic_baseline_help_outline_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+            <View style="@style/ProfileMenuDivider" />
+            <TextView android:id="@id/play_video" android:text="@string/video_tutorial" android:drawableStart="@drawable/ic_baseline_slow_motion_video_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+            <View style="@style/ProfileMenuDivider" />
+            <TextView android:id="@id/feedback" android:text="@string/feedback" android:drawableStart="@drawable/ic_baseline_feedback_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#8b9098" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:text="@string/more" android:layout_marginStart="2.0dp" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_profile_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dp">
+            <TextView android:id="@id/open_liibei" android:text="@string/fastcat_website" android:drawableStart="@drawable/ic_baseline_web_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+            <View style="@style/ProfileMenuDivider" />
+            <TextView android:id="@id/join_qq_group" android:text="@string/join_user_group" android:drawableStart="@drawable/ic_baseline_group_add_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+            <View android:id="@id/join_qq_group_divider" style="@style/ProfileMenuDivider" />
+            <TextView android:id="@id/about" android:text="@string/about_fastcat" android:drawableStart="@drawable/ic_info_24" android:drawableEnd="@drawable/ic_chevron_right_20" style="@style/ProfileMenuRow" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/logout" android:background="@drawable/bg_profile_logout" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginTop="18.0dp">
+            <ImageView android:layout_width="20.0dp" android:layout_height="20.0dp" android:src="@drawable/ic_logout_20" android:contentDescription="@null" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff7a86" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout" android:includeFontPadding="false" android:layout_marginStart="8.0dp" />
+        </LinearLayout>
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff7a86" android:gravity="center" android:id="@id/delete_account" android:background="@drawable/bg_profile_logout" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="10.0dp" android:text="@string/delete_account_permanently" />
+        <TextView android:textSize="11.0sp" android:textColor="#4f545c" android:gravity="center" android:id="@id/tv_app_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" />
+    </LinearLayout>
+</ScrollView>

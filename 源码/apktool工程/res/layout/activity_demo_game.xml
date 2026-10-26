@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/change_orientation_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="横竖屏切换" android:onClick="onClick" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="#151515" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5.0dp" android:text="试玩广告地址:" />
+        <EditText android:textSize="18.0sp" android:id="@id/demo_game_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dp" android:hint="请输入正确的试玩广告地址" android:lines="5" android:inputType="textUri" />
+    </LinearLayout>
+    <CheckBox android:id="@id/volume_on_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="有声播放" />
+    <Button android:id="@id/show_ad_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="展示广告" android:onClick="onClick" />
+    <TextView android:gravity="center" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="试玩广告开发者使用\n输入正确的试玩广告地址并通过验证后，展示的激励视频广告会在视频播放完成后展示输入的试玩广告。" android:onClick="onClick" />
+</LinearLayout>

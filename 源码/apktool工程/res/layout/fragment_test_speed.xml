@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#090a0c" android:scrollbars="none" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="20.0dp" android:paddingBottom="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+        <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/speed_test_title" />
+        <TextView android:textSize="12.0sp" android:textColor="#777d86" android:id="@id/hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/speed_test_subtitle" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_status" android:background="@drawable/bg_main_card" android:paddingTop="34.0dp" android:paddingBottom="24.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dp" android:minHeight="310.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+            <FrameLayout android:background="@drawable/bg_speed_icon" android:layout_width="92.0dp" android:layout_height="92.0dp">
+                <com.xuexiang.xui.widget.progress.loading.MiniLoadingView android:id="@id/progress" android:padding="10.0dp" android:visibility="gone" android:layout_width="92.0dp" android:layout_height="92.0dp" app:mlv_loading_view_color="#23cf7c" app:mlv_loading_view_size="72.0dp" />
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/icon_status" android:padding="25.0dp" android:layout_width="92.0dp" android:layout_height="92.0dp" android:src="@drawable/ic_speed_selected" />
+            </FrameLayout>
+            <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/tv_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dp" android:text="@string/speed_test_tap_to_start" android:lineSpacingExtra="7.0dp" />
+            <TextView android:textSize="11.0sp" android:textColor="#6f757e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="@string/speed_test_duration" />
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/btn_content" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginTop="28.0dp" android:minHeight="0.0dp" android:text="@string/speed_test_start" android:textAllCaps="false" android:backgroundTint="#23cf7c" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#858b94" android:background="@drawable/bg_main_card_inner" android:padding="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dp" android:text="@string/speed_test_data_notice" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/change_orientation_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="横竖屏切换" android:onClick="onClick" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/position_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="number" />
+        <Spinner android:id="@id/id_spinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" />
+    </LinearLayout>
+    <CheckBox android:id="@id/volume_on_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="有声播放" />
+    <Button android:id="@id/load_ad_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="加载广告" android:onClick="onClick" />
+    <Button android:id="@id/is_ad_valid_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="校验广告是否有效" android:onClick="onClick" />
+    <Button android:id="@id/show_ad_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="展示广告" android:onClick="onClick" />
+    <Button android:id="@id/show_ad_button_activity" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="展示广告(使用Activity展示)" android:onClick="onClick" />
+    <Button android:id="@id/request_token" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="获取 S2S token" android:onClick="requestS2SBiddingToken" />
+</LinearLayout>

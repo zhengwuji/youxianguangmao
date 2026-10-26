@@ -1,0 +1,68 @@
+name: 编译PC端并发布Release
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - '**/README.md'
+      - '.gitignore'
+      - '.gitattributes'
+      - 'LICENSE'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 编译 PC端 exe
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path build | Out-Null
+          & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe `
+            -nologo -target:winexe -codepage:65001 `
+            -out:"build\有线快猫-电脑端.exe" "电脑端\src\PC端.cs"
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: 打包（exe + gnirehtet relay + 使用说明）
+        shell: pwsh
+        run: |
+          $pkg = "package\有线快猫-电脑端"
+          New-Item -ItemType Directory -Force -Path "$pkg\gnirehtet-rust-win64" | Out-Null
+          Copy-Item "build\有线快猫-电脑端.exe" $pkg
+          Copy-Item "电脑端\gnirehtet-rust-win64\gnirehtet.exe" "$pkg\gnirehtet-rust-win64\"
+          Copy-Item "电脑端\gnirehtet-rust-win64\开源声明.md" "$pkg\gnirehtet-rust-win64\" -ErrorAction SilentlyContinue
+          @'
+          有线快猫（改造版）PC 端使用说明
+
+          1. 手机安装改造版 APK，并开启 开发者选项 -> USB 调试（详见仓库 README.md）
+          2. 用 USB 线连接手机与电脑，手机上允许 USB 调试
+          3. 双击 有线快猫-电脑端.exe，约 20 秒后手机 App 显示"已连接"
+          4. 保持本文件夹目录结构不变（gnirehtet-rust-win64 子目录必须与主程序同级）
+          5. 用完点击"停止全部"
+
+          详细说明: https://github.com/zhengwuji/youxianguangmao
+          '@ | Out-File "$pkg\使用说明.txt" -Encoding utf8
+          Compress-Archive -Path "package\有线快猫-电脑端" -DestinationPath "有线快猫-电脑端.zip"
+
+      - name: 发布到 Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: pc-v${{ github.run_number }}
+          name: PC端自动构建 #${{ github.run_number }}
+          body: |
+            本次代码推送自动编译生成。
+
+            压缩包内容：
+            - 有线快猫-电脑端.exe（PC 端监督程序）
+            - gnirehtet-rust-win64/gnirehtet.exe（官方中继，Apache-2.0）
+            - 使用说明.txt
+
+            使用方法见仓库 README.md。
+          files: 有线快猫-电脑端.zip

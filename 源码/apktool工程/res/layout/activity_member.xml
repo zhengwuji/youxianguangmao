@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#090a0c" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="12.0dp" android:paddingBottom="28.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="52.0dp">
+            <TextView android:textSize="34.0sp" android:textColor="#c6cad0" android:gravity="center" android:id="@id/member_close" android:layout_width="48.0dp" android:layout_height="48.0dp" android:text="‹" android:layout_alignParentStart="true" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/member_center" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_member_hero" android:paddingTop="18.0dp" android:paddingBottom="18.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="#b7a17b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current_plan" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/loading" />
+            <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="#f1c36f" android:id="@id/tv_status_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="--:--:--" />
+            <TextView android:textSize="12.0sp" android:textColor="#a9a095" android:id="@id/tv_status_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/syncing_benefits" />
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/btn_reward_ad_member" android:background="@drawable/bg_member_reward_button" android:layout_width="160.0dp" android:layout_height="42.0dp" android:layout_marginTop="14.0dp" android:text="@string/watch_ad_one_hour" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/member_benefits" />
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_member_benefits" android:paddingTop="14.0dp" android:paddingBottom="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#f1c36f" android:gravity="center" android:background="@drawable/bg_member_check" android:layout_width="28.0dp" android:layout_height="28.0dp" android:text="✓" />
+                <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dp" android:text="@string/members_only" />
+                <TextView android:textSize="10.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/remove_free_limit" />
+            </LinearLayout>
+            <View android:background="#282c33" android:layout_width="1.0dp" android:layout_height="54.0dp" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#f1c36f" android:gravity="center" android:background="@drawable/bg_member_check" android:layout_width="28.0dp" android:layout_height="28.0dp" android:text="✓" />
+                <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dp" android:text="@string/unlimited_time" />
+                <TextView android:textSize="10.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/connect_all_day" />
+            </LinearLayout>
+            <View android:background="#282c33" android:layout_width="1.0dp" android:layout_height="54.0dp" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#f1c36f" android:gravity="center" android:background="@drawable/bg_member_check" android:layout_width="28.0dp" android:layout_height="28.0dp" android:text="✓" />
+                <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dp" android:text="@string/cross_platform" />
+                <TextView android:textSize="10.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="Android / iPhone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/purchase_section_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/choose_plan" android:layout_weight="1.0" />
+            <TextView android:textSize="10.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_after_purchase" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#8fc2ff" android:gravity="center" android:id="@id/price_load_status" android:visibility="gone" android:layout_width="match_parent" android:layout_height="44.0dp" android:text="@string/play_prices_loading" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/plan_yearly" android:background="@drawable/bg_member_plan_recommended" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/annual_membership" />
+                    <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#17120a" android:background="@drawable/bg_member_recommended_badge" android:paddingTop="3.0dp" android:paddingBottom="3.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recommended" android:paddingStart="8.0dp" android:paddingEnd="8.0dp" android:layout_marginStart="8.0dp" />
+                </LinearLayout>
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#f1c36f" android:id="@id/price_yearly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/annual_price_fallback" />
+                <TextView android:textSize="11.0sp" android:textColor="#8d8372" android:id="@id/annual_price_average" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/annual_price_average" />
+            </LinearLayout>
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#17120a" android:gravity="center" android:id="@id/buy_yearly" android:background="@drawable/bg_member_buy_button" android:layout_width="92.0dp" android:layout_height="44.0dp" android:text="@string/subscribe_now" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/plan_monthly" android:background="@drawable/bg_member_plan" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/monthly_membership" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#e2e5e9" android:id="@id/price_monthly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/monthly_price_fallback" />
+                <TextView android:textSize="11.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/monthly_flexible" />
+            </LinearLayout>
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/buy_monthly" android:background="@drawable/bg_member_buy_button_secondary" android:layout_width="92.0dp" android:layout_height="44.0dp" android:text="@string/subscribe" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/plan_lifetime" android:background="@drawable/bg_member_plan" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lifetime_purchase" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#e2e5e9" android:id="@id/price_lifetime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="@string/lifetime_price_fallback" />
+                <TextView android:textSize="11.0sp" android:textColor="#747a83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:text="@string/lifetime_purchase_detail" />
+            </LinearLayout>
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/buy_lifetime" android:background="@drawable/bg_member_buy_button_secondary" android:layout_width="92.0dp" android:layout_height="44.0dp" android:text="@string/purchase_lifetime" />
+        </LinearLayout>
+        <TextView android:textSize="11.0sp" android:textColor="#666c75" android:gravity="center" android:id="@id/purchase_sync_note" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dp" android:text="@string/benefits_sync_windows_note" />
+        <TextView android:textSize="11.0sp" android:textColor="#777d86" android:gravity="center" android:id="@id/subscription_disclosure" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dp" android:text="@string/subscription_terms_short" android:lineSpacingExtra="2.0dp" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#8fc2ff" android:gravity="center" android:id="@id/manage_subscription" android:layout_width="match_parent" android:layout_height="44.0dp" android:layout_marginTop="8.0dp" android:text="@string/manage_play_subscription" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="44.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="#8fc2ff" android:gravity="center" android:id="@id/member_terms" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/terms_of_service" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" />
+            <TextView android:textSize="12.0sp" android:textColor="#8fc2ff" android:gravity="center" android:id="@id/member_privacy" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/privacy_policy" android:paddingStart="16.0dp" android:paddingEnd="16.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

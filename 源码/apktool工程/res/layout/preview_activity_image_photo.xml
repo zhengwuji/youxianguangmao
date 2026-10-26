@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/xui_config_color_transparent" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xuexiang.xui.widget.imageview.preview.view.PhotoViewPager android:id="@id/viewPager" android:background="@color/xui_config_color_transparent" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:textStyle="bold" android:textColor="@color/xui_config_color_white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_index" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="12.0dp" android:text="1/2" />
+    <com.xuexiang.xui.widget.imageview.preview.view.BezierBannerView android:layout_gravity="center|bottom" android:id="@id/bezierBannerView" android:paddingBottom="10.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:bbv_selectedColor="@color/xui_config_color_white" app:bbv_selectedRadius="4.0dp" app:bbv_spacing="6.0dp" app:bbv_unSelectedColor="@android:color/darker_gray" app:bbv_unSelectedRadius="4.0dp" />
+</FrameLayout>

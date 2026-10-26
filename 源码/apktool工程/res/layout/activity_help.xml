@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:src="@drawable/ic_baseline_close_24" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="有线连接需要先使用USB调试功能连接到电脑，请按以下步骤打开USB调试功能：" />
+    <TextView android:id="@id/open_develop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dp" android:text="@string/text_open_develop" android:layout_marginStart="20.0dp" />
+    <Button android:layout_gravity="end" android:id="@id/btn_open_device_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="去点击" android:layout_marginStart="20.0dp" />
+    <TextView android:id="@id/open_debug" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dp" android:text="@string/text_open_debug" android:layout_marginStart="20.0dp" />
+    <Button android:layout_gravity="end" android:id="@id/btn_open_debug" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="去打开" android:layout_marginStart="20.0dp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dp" android:text="弹出选择USB用途时选择【传输文件（MTP）】" android:layout_marginStart="20.0dp" />
+    <Space android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <TextView android:textSize="12.0sp" android:gravity="end" android:id="@id/other_help" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dp" android:text="执行以上步骤仍未打开？" android:layout_marginStart="20.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/xui_config_color_link" android:gravity="end" android:id="@id/link_baidu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="百度搜索怎么打开开发者模式" android:layout_marginStart="20.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/xui_config_color_link" android:gravity="end" android:id="@id/link360" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="使用360手机助手的USB线连接功能" android:layout_marginStart="20.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/xui_config_color_link" android:gravity="end" android:autoLink="all" android:linksClickable="true" android:id="@id/play_video" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="观看视频教程" android:layout_marginStart="20.0dp" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/xui_config_color_link" android:gravity="end" android:autoLink="all" android:id="@id/join_qq_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="加入QQ群" android:layout_marginStart="20.0dp" />
+</LinearLayout>

@@ -1,0 +1,123 @@
+.class synthetic Lcom/xuexiang/xui/widget/textview/LoggerTextView$3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xuexiang/xui/widget/textview/LoggerTextView;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1009
+    name = null
+.end annotation
+
+
+# static fields
+.field static final synthetic $SwitchMap$com$xuexiang$xui$widget$textview$LoggerTextView$LogType:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;->values()[Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    array-length v0, v0
+
+    .line 6
+    new-array v0, v0, [I
+
+    .line 7
+    .line 8
+    sput-object v0, Lcom/xuexiang/xui/widget/textview/LoggerTextView$3;->$SwitchMap$com$xuexiang$xui$widget$textview$LoggerTextView$LogType:[I
+
+    .line 9
+    .line 10
+    :try_start_0
+    sget-object v1, Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;->ERROR:Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;
+
+    .line 11
+    .line 12
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v1
+
+    .line 16
+    const/4 v2, 0x1
+
+    .line 17
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 18
+    .line 19
+    :catch_0
+    :try_start_1
+    sget-object v0, Lcom/xuexiang/xui/widget/textview/LoggerTextView$3;->$SwitchMap$com$xuexiang$xui$widget$textview$LoggerTextView$LogType:[I
+
+    .line 20
+    .line 21
+    sget-object v1, Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;->SUCCESS:Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v1
+
+    .line 27
+    const/4 v2, 0x2
+
+    .line 28
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 29
+    .line 30
+    :catch_1
+    :try_start_2
+    sget-object v0, Lcom/xuexiang/xui/widget/textview/LoggerTextView$3;->$SwitchMap$com$xuexiang$xui$widget$textview$LoggerTextView$LogType:[I
+
+    .line 31
+    .line 32
+    sget-object v1, Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;->WARNING:Lcom/xuexiang/xui/widget/textview/LoggerTextView$LogType;
+
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v1
+
+    .line 38
+    const/4 v2, 0x3
+
+    .line 39
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 40
+    .line 41
+    :catch_2
+    return-void
+.end method

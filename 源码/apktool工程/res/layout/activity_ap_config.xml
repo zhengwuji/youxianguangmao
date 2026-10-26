@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#eeeeee" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/img_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_close_24" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="网络名称" />
+    <EditText android:enabled="false" android:id="@id/edit_ap_name" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginTop="5.0dp" android:hint="下载有线快猫使用" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="密码" />
+    <EditText android:id="@id/edit_ap_password" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginTop="5.0dp" android:hint="设置热点密码" android:inputType="textPassword" />
+    <Button android:layout_gravity="center" android:id="@id/btn_ap_config_ok" android:layout_width="180.0dp" android:layout_height="wrap_content" android:layout_marginTop="50.0dp" android:text="确定" />
+</LinearLayout>

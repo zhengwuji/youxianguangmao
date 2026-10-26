@@ -1,0 +1,67 @@
+.class public final Lk0/m;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:Lcom/liibei/fastcat/fragment/UserFragment;
+
+
+# direct methods
+.method public constructor <init>(Lcom/liibei/fastcat/fragment/UserFragment;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lk0/m;->a:Lcom/liibei/fastcat/fragment/UserFragment;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 3
+
+    .line 1
+    new-instance p1, Landroid/content/Intent;
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lk0/m;->a:Lcom/liibei/fastcat/fragment/UserFragment;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    const-class v2, Lcom/liibei/fastcat/activity/MemberActivity;
+
+    .line 10
+    .line 11
+    invoke-direct {p1, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+.end method

@@ -1,0 +1,31 @@
+# ===== 构建产物 / 二进制（不入库，Release 由 CI 生成）=====
+*.apk
+*.idsig
+*.exe
+!电脑端/gnirehtet-rust-win64/gnirehtet.exe
+dist/
+build/
+bin/
+obj/
+
+# ===== 反编译参考输出（只读，不入库）=====
+源码/sources/
+源码/resources/
+
+# ===== apktool 工程内的临时/原始副本 =====
+源码/apktool工程/original/
+**/_tmp_smali_lib/
+_tmp/
+__pycache__/
+
+# ===== 内部调试工作日志（含测试环境信息，不入库）=====
+源码/README.md
+
+# ===== 调试工具与运行日志 =====
+电脑端/tools/
+*.log
+
+# ===== 压缩包 / 系统杂项 =====
+*.zip
+Thumbs.db
+.DS_Store

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_titleBarHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_titleBarHeight" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏高度(dp)" android:singleLine="true" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_titleBarColor" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_titleBarColor" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏颜色(16进制int)" android:singleLine="true" android:maxLength="8" android:digits="0123456789ABCDEF" android:layout_weight="1.0" android:inputType="textCapCharacters" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏title(String)" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_titleColor" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_titleColor" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏title字体颜色(16进制int)" android:singleLine="true" android:maxLength="8" android:digits="0123456789ABCDEF" android:layout_weight="1.0" android:inputType="textCapCharacters" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_titleSize" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_titleSize" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏title字体大小(sp)" android:singleLine="true" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_back" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_back" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏back键icon(String:Drawable资源名称)" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_close" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_close" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="导航栏close键icon(String:Drawable资源名称)" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_seperator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_seperator" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="分割线色值(16进制int)" android:singleLine="true" android:maxLength="8" android:digits="0123456789ABCDEF" android:layout_weight="1.0" android:inputType="textCapCharacters" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/cb_back_seperator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:ellipsize="end" android:id="@id/et_back_seperator" android:layout_width="0.0dp" android:layout_height="wrap_content" android:hint="返回键分割线长度(int)" android:singleLine="true" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:ellipsize="end" android:id="@id/url" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="http://developers.adnet.qq.com/open/index" android:hint="请输入URL" android:singleLine="true" android:layout_weight="4.0" />
+            <Button android:id="@id/go" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="跳转" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

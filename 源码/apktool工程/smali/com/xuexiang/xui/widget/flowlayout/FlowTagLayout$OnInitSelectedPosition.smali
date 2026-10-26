@@ -1,0 +1,19 @@
+.class public interface abstract Lcom/xuexiang/xui/widget/flowlayout/FlowTagLayout$OnInitSelectedPosition;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xuexiang/xui/widget/flowlayout/FlowTagLayout;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnInitSelectedPosition"
+.end annotation
+
+
+# virtual methods
+.method public abstract isSelectedPosition(I)Z
+.end method

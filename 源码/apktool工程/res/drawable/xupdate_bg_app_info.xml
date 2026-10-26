@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:bottomLeftRadius="@dimen/xupdate_bg_app_info_radius" android:bottomRightRadius="@dimen/xupdate_bg_app_info_radius" />
+    <solid android:color="@color/xupdate_default_bg_color" />
+</shape>
