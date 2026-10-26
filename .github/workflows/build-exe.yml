@@ -49,7 +49,7 @@ jobs:
 
           详细说明: https://github.com/zhengwuji/youxianguangmao
           '@ | Out-File "$pkg\使用说明.txt" -Encoding utf8
-          Compress-Archive -Path "package\有线快猫-电脑端" -DestinationPath "有线快猫-电脑端.zip"
+          Compress-Archive -Path "package\有线快猫-电脑端" -DestinationPath "youxianguangmao-pc.zip"
 
       - name: 发布到 Releases
         uses: softprops/action-gh-release@v2
@@ -65,4 +65,4 @@ jobs:
             - 使用说明.txt
 
             使用方法见仓库 README.md。
-          files: 有线快猫-电脑端.zip
+          files: youxianguangmao-pc.zip
